@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mission: Win Anam's Heart ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Animated Background -->
+
+<div id="backgroundHearts"></div>
+
+<!-- Loading Screen -->
+
+<div id="loading">
+
+    <div class="loader">
+
+        ❤️
+
+    </div>
+
+    <h2>
+
+        Loading Love...
+
+    </h2>
+
+</div>
+
+<!-- Start Screen -->
+
+<section id="startScreen"
+         class="screen active">
+
+    <div class="glass">
+
+        <h1>
+
+            ❤️ Mission ❤️
+
+        </h1>
+
+        <h2>
+
+            Win Anam's Heart
+
+        </h2>
+
+        <img src="assets/couple.jpg"
+             class="mainPhoto"
+             alt="Anwar and Anam">
+
+        <p>
+
+            Every heartbeat reminds me
+            how special you are...
+
+        </p>
+
+        <button id="startBtn">
+
+            Start Journey ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Story Screen -->
+
+<section id="storyScreen"
+         class="screen">
+
+<div class="glass">
+
+<h2>
+
+Dear Anam ❤️
+
+</h2>
+
+<p>
+
+Sometimes we fight.
+
+Sometimes we misunderstand each other.
+
+But one thing never changes...
+
+My love for you.
+
+Today I want to win your heart again.
+
+Help me collect every heart ❤️
+
+and rebuild our beautiful love.
+
+</p>
+
+<button id="storyBtn">
+
+Continue 💕
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Game Screen -->
+
+<section id="gameScreen"
+         class="screen">
+
+<header>
+
+<div class="score">
+
+❤️ Hearts :
+
+<span id="score">
+
+0
+
+</span>
+
+</div>
+
+<div class="life">
+
+💖 Lives :
+
+<span id="lives">
+
+3
+
+</span>
+
+</div>
+
+</header>
+
+<div id="gameArea">
+
+<div id="basket">
+
+🧺
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Win Screen -->
+
+<section id="winScreen"
+         class="screen">
+
+<div class="glass">
+
+<h1>
+
+🎉 Congratulations 🎉
+
+</h1>
+
+<p>
+
+You collected every piece
+of my heart...
+Will you forgive me?
+
+</p>
+
+<img src="assets/couple.jpg"
+     class="finalPhoto"
+     alt="Anwar and Anam">
+
+<div class="messageBox">
+
+<h2>
+
+💌 A Message From Anwar
+
+</h2>
+
+<p id="loveMessage">
+
+"Jaan, I'm truly sorry if I ever hurt you.
+Every heartbeat reminds me of how much you mean to me.
+No matter what happens, my love for you will never change.
+Please forgive me and let me make you smile again.
+
+I love you forever. ❤️
+
+— Anwar"
+
+</p>
+
+</div>
+
+<div class="buttonGroup">
+
+<button id="yesBtn">
+
+❤️ Yes, I Forgive You
+
+</button>
+
+<button id="noBtn">
+
+💔 No
+
+</button>
+
+</div>
+
+<div id="successMessage">
+
+<h1>
+
+🥹 Thank You My Love ❤️
+
+</h1>
+
+<p>
+
+You made me the happiest person alive.
+
+I promise...
+
+I'll respect you...
+
+I'll care for you...
+
+I'll love you forever.
+
+❤️ Anwar ❤️
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Heart Explosion -->
+
+<div id="heartExplosion"></div>
+
+<!-- Floating Roses -->
+
+<div id="roseContainer"></div>
+
+<!-- Sparkles -->
+
+<div id="sparkles">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- Confetti Canvas -->
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Background Music -->
+
+<audio id="bgMusic" loop>
+
+<source src="assets/music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- Click Sound -->
+
+<audio id="clickSound">
+
+<source src="assets/click.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- Success Sound -->
+
+<audio id="successSound">
+
+<source src="assets/success.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- Restart Overlay -->
+
+<div id="gameOver">
+
+<div class="glass">
+
+<h2>
+
+💔 Don't Give Up
+
+</h2>
+
+<p>
+
+Love deserves another chance.
+
+Try collecting all the hearts again.
+
+</p>
+
+<button id="restartBtn">
+
+❤️ Play Again
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Mobile Controls -->
+
+<div id="mobileControls">
+
+<button id="leftBtn">
+
+⬅️
+
+</button>
+
+<button id="rightBtn">
+
+➡️
+
+</button>
+
+</div>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+Made with ❤️ by Anwar for Anam
+
+</p>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script src="game.js"></script>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+const loading=document.getElementById("loading");
+
+setTimeout(()=>{
+
+loading.classList.add("hide");
+
+},2500);
+
+});
+
+</script>
+
+</body>
+
+</html>
